@@ -1,5 +1,7 @@
 package OOP_Java.Homework2;
 
+import java.util.List;
+
 public class Plate {
     private static int food;
 
@@ -12,9 +14,9 @@ public class Plate {
     }
 
     public Plate(int food) {
-        this.food = food;
         checkFood(food);
     }
+
     public void info() {
         if (getFood() == 0) {
             System.out.println("Миска пуста");
@@ -38,6 +40,12 @@ public class Plate {
         System.out.println("-----------------");
         System.out.println(String.format("Добавили %d еды", addedFood));
         System.out.println("-----------------");
+    }
+
+    public void feast(List<Cat> catArray) {
+        for (Cat cat : catArray) {
+            setFood(cat.eat());
+        }
     }
 }
 

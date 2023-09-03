@@ -1,7 +1,6 @@
 package OOP_Java.Homework2;
 
-import java.util.ArrayList;
-import java.util.Objects;
+import java.util.List;
 
 public class Cat {
     private String name;
@@ -19,13 +18,11 @@ public class Cat {
     public boolean isBellyful() {
         if (bellyful == true) {
             System.out.println(String.format("%s сытый", getName()));
-            return bellyful;
         }
         else {
             System.out.println(String.format("%s голодный", getName()));
-            return bellyful;
         }
-
+        return bellyful;
     }
 
     public Cat(String name, int appetite) {
@@ -59,6 +56,13 @@ public class Cat {
         return Plate.getFood();
     }
 
+    public static void checkBellyStatus(List<Cat> catArray){
+        System.out.println("~~~~~~~~~~~~~~~~");
+        for (Cat cat : catArray) {
+            cat.isBellyful();
+        }
+        System.out.println("~~~~~~~~~~~~~~~~");
+    }
 }
 
 

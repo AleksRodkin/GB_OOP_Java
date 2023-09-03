@@ -1,40 +1,30 @@
 package OOP_Java.Homework2;
 
-import OOP_Java.Lesson1.Product;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class Program {
     public static void main(String[] args) {
 
-        Plate plate = new Plate(5);
+        Plate plate = new Plate(12);
         plate.info();
         
-        Cat cat1 = new Cat("Барсик", 5);
-        Cat cat2 = new Cat("Моня", 4);
-        Cat cat3 = new Cat("Боцман", 3);
+        Cat cat1 = new Cat("Барсик", 7);
+        Cat cat2 = new Cat("Моня", 6);
+        Cat cat3 = new Cat("Боцман", 4);
 
-        List<Cat> cats = new ArrayList<>();
-        cats.add(cat1);
-        cats.add(cat2);
-        cats.add(cat3);
+        List<Cat> catArrayList = new ArrayList<>();
+        catArrayList.add(cat1);
+        catArrayList.add(cat2);
+        catArrayList.add(cat3);
 
-        for (Cat cat: cats) {
-            plate.setFood(cat.eat());
-        }
-        for (Cat cat: cats) {
-            cat.isBellyful();
-        }
+        plate.feast(catArrayList);
+        Cat.checkBellyStatus(catArrayList);
 
-        plate.addFood(7);
+        plate.addFood(5);
         plate.info();
 
-        for (Cat cat: cats) {
-            plate.setFood(cat.eat());
-        }
-        for (Cat cat: cats) {
-            cat.isBellyful();
-        }
+        plate.feast(catArrayList);
+        Cat.checkBellyStatus(catArrayList);
     }
 }
