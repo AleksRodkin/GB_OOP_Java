@@ -1,2 +1,12 @@
-package OOP_Java.Lesson4.Homework4;public class Orange {
+package OOP_Java.Lesson4.Homework4;
+
+public class Orange extends Fruit {
+    public Orange() {
+        super(1.5f);
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Orange");
+    }
 }
