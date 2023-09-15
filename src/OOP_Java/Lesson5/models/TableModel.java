@@ -56,15 +56,15 @@ public class TableModel implements Model {
      * @param tableNo номер столика
      * @param name Имя
      */
-    public int changeReservationTable(int oldReservation, Date reservationDate, int tableNo, String name){
-        for (Table table : loadTables()) {
-            if (table.getNo() == tableNo){
-                Reservation reservation = new Reservation(reservationDate, name);
-                table.getReservations().add(reservation);
-                return reservation.getId();
-            }
-        }
-        return  -1;
-    }
+//    public int changeReservationTable(int oldReservation, Date reservationDate, int tableNo, String name){
+//        for (Table table : loadTables()) {
+//            if (table.getNo() == tableNo){
+//                Reservation reservation = new Reservation(reservationDate, name);
+//                table.getReservations().add(reservation);
+//                return reservation.getId();
+//            }
+//        }
+//        return  -1;
+//    }
 }
 
